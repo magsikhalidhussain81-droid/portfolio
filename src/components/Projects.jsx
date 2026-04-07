@@ -5,7 +5,7 @@ const projectItems = [
       "AI-powered web application that detects diabetic retinopathy using deep learning. Integrated Flask backend with React frontend. Displays predictions with confidence scores.",
     stack: ["React", "Flask", "Python", "TensorFlow"],
     github: "#",
-    demo: "#",
+    demo: "https://gentle-nasturtium-0775a6.netlify.app",
   },
   {
     title: "Portfolio Website",
