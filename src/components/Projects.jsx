@@ -1,40 +1,64 @@
 const projectItems = [
   {
-    title: "Diabetic Retinopathy Detection",
+    title: "Diabetic Retinopathy Detection System",
     description:
-      "AI web app that detects eye disease using deep learning model. Built with React + Flask.",
-    github: "https://github.com/yourname/project",
+      "AI-powered web application that detects diabetic retinopathy using deep learning. Integrated Flask backend with React frontend. Displays predictions with confidence scores.",
+    stack: ["React", "Flask", "Python", "TensorFlow"],
+    github: "#",
     demo: "#",
   },
   {
     title: "Portfolio Website",
-    description: "A personal portfolio built with React and Tailwind CSS.",
-    github: "/",
-    demo: "/",
+    description: "A modern portfolio website with responsive sections and smooth navigation.",
+    stack: ["React", "Tailwind CSS", "Netlify"],
+    github: "https://github.com/yourname/portfolio",
+    demo: "#",
   },
   {
     title: "Task Manager App",
-    description: "A productivity app with authentication, CRUD features, and a clean dashboard.",
-    github: "/",
-    demo: "/",
+    description: "Productivity app with authentication, task tracking, and dashboard insights.",
+    stack: ["React", "Flask", "SQLite"],
+    github: "https://github.com/yourname/task-manager",
+    demo: "#",
   },
 ];
 
 const Projects = () => {
   return (
     <section id="projects" className="bg-black text-white p-10">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10">Projects</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+      <div className="mx-auto max-w-6xl rounded-2xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-sm">
+        <h2 className="mb-10 text-3xl font-bold">Projects</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projectItems.map((project) => (
-            <article key={project.title} className="bg-gray-800 rounded-xl p-6 border border-gray-700">
+            <article
+              key={project.title}
+              className="rounded-xl border border-white/10 bg-gray-900/70 p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:border-blue-500/60"
+            >
+              <div className="mb-4 h-40 rounded-lg border border-white/10 bg-gradient-to-br from-gray-800 to-gray-700" />
               <h2 className="text-xl font-semibold mb-3">{project.title}</h2>
               <p className="text-gray-300 mb-6">{project.description}</p>
+              <div className="mb-5 flex flex-wrap gap-2">
+                {project.stack.map((item) => (
+                  <span key={item} className="rounded-full bg-blue-500/15 px-3 py-1 text-xs text-blue-300">
+                    {item}
+                  </span>
+                ))}
+              </div>
               <div className="flex gap-3">
-                <a href={project.github} className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded"
+                >
                   GitHub
                 </a>
-                <a href={project.demo} className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded"
+                >
                   Live Demo
                 </a>
               </div>
